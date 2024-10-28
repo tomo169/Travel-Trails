@@ -1,0 +1,102 @@
+@font-face {
+    font-family: 'RobotoLI';
+    src: url(./assets/fonts/Roboto-LightItalic.ttf);
+}
+
+@font-face {
+    font-family: 'RobotoCite';
+    src: url(./assets/fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'RobotoRegular';
+    src: url(./assets/fonts/Roboto-Regular.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.quote-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E5E7EB;
+    padding: 8% 0;
+}
+
+blockquote {
+    width: 65%;
+}
+
+blockquote p {
+    font-size: 36px;
+    font-family: 'RobotoLI', sans-serif;
+    color: #1F2937;
+    margin: 0;
+}
+
+blockquote footer {
+    text-align: right;
+}
+
+blockquote footer cite{
+    font-size: 24px;
+    font-family:'RobotoCite', sans-serif ;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.call-to-action-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7% 0;
+}
+
+.call-to-action{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #3882F6;
+    width: 50%;
+    padding: 3% 6%;
+    border-radius: 5px;
+}
+
+.call-to-action h3 {
+    color: #E5E7EB;
+    margin: 0;
+    font-family: 'RobotoRegular', sans-serif;
+}
+
+.call-to-action p {
+    color: #E5E7EB;
+    margin: 0;
+    font-family: 'RobotoRegular', sans-serif;
+}
+
+.action-button {
+    align-self: center;
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #E5E7EB;
+    border-radius: 5px;
+    border-color: #E5E7EB;
+    color: #E5E7EB;
+    padding: 6px 30px;
+    font-family: 'RobotoCite', sans-serif;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1F2937;
+    margin: 0;
+    color: #E5E7EB;
+    font-family: 'RobotoRegular', sans-serif;
+    min-height: 10vh;
+}
