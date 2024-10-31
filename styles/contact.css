@@ -23,7 +23,13 @@ body{
 
 .logo{
     color: #F9FAF8;
+    text-decoration: none;
 }
+
+.logo a {
+    text-decoration: none;
+}
+
 .nav {
     display: flex;
     gap: 1.25rem; 
