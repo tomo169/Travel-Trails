@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/signup.css">
+    <title>Sign up</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <h1 class="logo">Travel Trails</h1>
+
+            <!-- Hamburger menu -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <nav class="nav">
+                <a href="../index.html">Home</a>
+                <a href="./about.html">About</a>
+                <a href="./contact.html">Contact</a>
+                <a href="./signup.html">Sign up</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="signup-container">
+            <section class="signup-item-text">
+                <h1>Unlock Your Dream Holiday!</h1>
+
+                <p>
+                    Are you ready to escape the everyday and embrace adventure? Picture yourself lounging on a
+                    sun-kissed beach, exploring vibrant markets, or hiking through breathtaking landscapes.
+
+                    Join us for an unforgettable holiday experience! Sign up now to access exclusive deals, insider
+                    tips, and personalized itineraries tailored just for you.
+                </p>
+                <p>
+                    <strong>Why wait? Your dream getaway is just a click away!</strong><br> 
+                    Embrace the joy of travel and make memories that last a lifetime.
+                </p>
+                <h2>Sign up today and start your journey!</h2>
+            </section>
+            <form action="" class="signup-item-form">
+                <div>
+                    <label for="fname">First name:</label><br>
+                    <input type="text" name="fname" required>
+                </div>
+                <div>
+                    <label for="sname">Surname:</label><br>
+                    <input type="text" name="sname" required>
+                </div>
+                <div> <label for="email">E-mail:</label><br>
+                    <input type="email" name="email" required>
+                </div>
+                <div>
+                    <label for="country-select">Travel to:</label><br>
+                    <select name="country-select" id="">
+                        <option value="london">London</option>
+                        <option value="lisbon">Lisbon</option>
+                        <option value="seoul">Seoul</option>
+                        <option value="shanghai">Shanghai</option>
+                    </select>
+                </div>
+                <div>
+                    <input type="checkbox" name="terms" id="terms" required>
+                    <label for="terms" id="termslabel"> I have read and agree with the Terms and Conditions.</label><br>
+                    <button class="action-button">Sign up</button>
+                </div>
+
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">Triple Vortex Copyright &copy;</footer>
+
+</body>
+
+</html>
