@@ -29,7 +29,7 @@ html {
 }
 
 .container {
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -37,6 +37,10 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.header-container a {
+    text-decoration: none;
 }
 
 .logo {
@@ -53,7 +57,7 @@ html {
 .nav a {
     color: #E5E7EB;
     text-decoration: none;
-    font-size: 1,125rem;
+    font-size: 1.125rem;
     font-family: 'RobotoRegular', sans-serif;
 }
 
@@ -93,19 +97,20 @@ html {
 }
 
 .content-image-placeholder {
-    flex: 1; /* Takes the remaining space */
-    min-width: 15rem; /* Minimum width for smaller screens */
-    height: 15.625rem; /* approx 250px */
+    flex: 1; 
+    width: 100%; 
+    min-height: 15.625rem; 
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* Ensures no overflow if the image is larger */
+    overflow: hidden; 
 }
 
 .content-image-placeholder img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Makes the image cover the whole space without distortion */
+    object-fit: cover;
+    border-radius: 50px;
 }
 
 
@@ -138,7 +143,7 @@ html {
 }
 
 .info-image-placeholder {
-    width: 8rem; /* Controls the size of the square */
+    width: 8rem; 
     height: 8rem;
     border: 3px solid #3882F6;
     border-radius: 0.65rem;
@@ -183,18 +188,18 @@ html {
 }
 
 .trip-content-image-placeholder {
-    min-width: 15rem; /* Minimum width for smaller screens */
-    height: 15.625rem; /* approx 250px */
+    min-width: 15rem; 
+    height: 15.625rem; 
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* Ensures no overflow if the image is larger */
+    overflow: hidden; 
 }
 
 .trip-content-image-placeholder img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Makes the image cover the whole space without distortion */
+    object-fit: cover; 
 }
 
 .trip-text-content {
@@ -250,26 +255,32 @@ html {
 
 /* Media query for screens below 1000px */
 @media (max-width: 1000px) {
+    
+    .content {
+        padding: 10%;
+    }
+    
     .content-container {
         flex-direction: column;
-        align-items: center; /* Center content in column layout */
-        text-align: center; /* Center-align text */
+        align-items: center; 
+        text-align: center;
     }
 
     .text-content {
-        max-width: 100%; /* Full width for text */
+        max-width: 100%; 
     }
 
     .content-image-placeholder {
-        width: 100%; /* Full width for image */
-        height: auto; /* Adjust height to fit image aspect ratio */
+        width: 100%; 
+        height: auto; 
     }
 
     .content-image-placeholder img {
         max-width: 100%;
         height: auto;
-        object-fit: contain; /* Adjust fit for responsive sizing */
+        object-fit: contain; 
     }
+
 }
 
 /* Media query for phone screens */
@@ -279,11 +290,11 @@ html {
         display: flex;
     }
 
-    /* Hide the nav by default on small screens */
+   
     .nav {
         display: none;
         position: absolute;
-        top: 4rem; /* Adjust as needed */
+        top: 4rem;
         right: 1rem;
         background-color: #1a1a2e;
         padding: 1rem;
@@ -292,12 +303,11 @@ html {
         gap: 1rem;
     }
 
-    /* Show nav when menu toggle is checked */
+   
     .menu-toggle:checked + .hamburger-icon + .nav {
         display: flex;
     }
 
-    /* Transform hamburger icon to "X" when menu is open */
     .menu-toggle:checked + .hamburger-icon span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
     }
