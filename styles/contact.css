@@ -85,7 +85,6 @@ body{
 .contact  .content{
     max-width: 800px;
     text-align: center;
-    z-index: -1;
 }
 
 .contact  .content h2{
@@ -225,25 +224,23 @@ body{
         display: flex;
     }
 
-    /* Hide the nav by default on small screens */
     .nav {
         display: none;
         position: absolute;
-        top: 4rem; /* Adjust as needed */
+        top: 4rem; 
         right: 1rem;
         background-color: #1a1a2e;
         padding: 1rem;
         border-radius: 0.5rem;
         flex-direction: column;
         gap: 1rem;
+        z-index: 10;
     }
 
-    /* Show nav when menu toggle is checked */
     .menu-toggle:checked + .hamburger-icon + .nav {
         display: flex;
     }
 
-    /* Transform hamburger icon to "X" when menu is open */
     .menu-toggle:checked + .hamburger-icon span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
     }
