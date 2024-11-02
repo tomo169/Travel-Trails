@@ -13,7 +13,7 @@ This project aims to create a visually appealing and user-friendly website to pr
 - **Homepage:** A welcoming landing page with featured trips and a call to action.
 - **About section:** Detailed sections for each trip package, including images and descriptions.
 - **Contact Form:** A simple contact form for potential customers to reach out for inquiries or reservations.
-- **Signup Page:** A straightforward registration form that allows users to sign up for their chosen trip, providing essential details to secure their spot and receive trip-related updates and confirmations.
+- **Signup Page:** A straightforward registration form that allows users to sign up for their chosen trip.
 - **Responsive Design:** The layout is optimized for different screen sizes, ensuring a smooth experience on both desktop and mobile devices.
 
 ## Technologies Used
