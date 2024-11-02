@@ -1,6 +1,6 @@
 # Travel-Trails
 
-**Live link:https://github.com/tomo169/Travel-Trails.git**
+**Live link: https://tomo169.github.io/Travel-Trails/**
 
 A simple, static website for showcasing and selling travel packages. This project is built using only HTML and CSS to provide a clean, responsive design, making it accessible and easy to navigate for potential customers.
 
