@@ -6,7 +6,7 @@ A simple, static website for showcasing and selling travel packages. This projec
 
 ## Project Overview
 
-This project aims to create a visually appealing and user-friendly website to promote and sell trips to various destinations. It includes sections to highlight different trip packages and a contact form for inquiries.
+This project aims to create a visually appealing and user-friendly website to promote and sell trips to various destinations.
 
 ## Features
 
