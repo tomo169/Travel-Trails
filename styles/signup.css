@@ -27,6 +27,7 @@ html {
 .header {
     background-color: #1F2937;
     padding: 1.25rem 0;
+    position: relative;
 }
 
 .container {
@@ -63,11 +64,26 @@ html {
 }
 
 body {
-    background-color: #1F2937;
     padding-bottom: 5vh;
 }
 
+body::before {
+    content: "";
+    background-image: url(../assets/images/signupBackground.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    bottom: 0rem;
+    left: 0rem;
+    opacity: 0.75;
+}
+
 .signup-container {
+    position: relative;
     display: flex;
     width: 90%;
     flex-direction: row-reverse;
@@ -81,15 +97,20 @@ body {
     background-color: #E5E7EB;
     border-radius: 15px;
     width: 55%;
+    height: 100%;
 }
 
 .signup-item-form {
+    background-color: #E5E7EB;
+    border-radius: 15px;
+    padding: 3rem;
     display: flex;
     flex-direction: column;
-    width: 45%;
+    width: 30%;
 }
 
-.signup-item-text h1,h2 {
+.signup-item-text h1,
+h2 {
     font-size: 3rem;
     font-family: 'RobotoCite', sans-serif;
     font-weight: bold;
@@ -97,8 +118,10 @@ body {
     color: #1F2937;
     padding: 10px;
 }
+
 .signup-item-text h2 {
     font-size: 1.5rem;
+    color: #3882F6;
 }
 
 .signup-item-text p {
@@ -108,9 +131,13 @@ body {
     padding: 10px;
 }
 
+#termsContainer {
+    display: flex;
+}
+
 #terms {
-    margin-right: 1px;
-    width: 5%;
+    margin-right: 0.5rem;
+    width: .85rem;
     cursor: pointer;
 }
 
@@ -119,30 +146,34 @@ body {
     font-weight: lighter;
     font-size: small;
     margin-left: 1px;
+    margin: 10px 0;
 }
 
 .signup-item-form input {
-    padding: 1%;
+    padding: 3%;
     margin: 10px 0;
+    width: 10.5rem;
+    height: 2rem;
     border-radius: 4px;
     background-color: #f1f1f1;
 }
 
 .signup-item-form select {
-    padding: 1%;
+    padding: 3%;
     margin: 10px 0;
+    width: 8rem;
     border-radius: 4px;
     background-color: #f1f1f1;
 }
 
-.signup-item-form div {
+/* .signup-item-form div {
     width: 55%;
-}
+} */
 
 .signup-item-form label {
     font-family: 'RobotoCite', sans-serif;
     font-weight: bold;
-    color: #F9FAF8;
+    color: #1F2937;
 }
 
 .action-button {
@@ -154,6 +185,12 @@ body {
     padding: 6px 30px;
     margin: 10px 0;
     font-family: 'RobotoCite', sans-serif;
+    transition-duration: 0.4s;
+}
+
+.action-button:hover {
+    background-color: #86b1f7;
+    border: 2px solid #86b1f7;
 }
 
 .footer {
@@ -233,6 +270,7 @@ body {
         flex-direction: column;
         gap: 1rem;
     }
+
     .menu-toggle:checked+.hamburger-icon+.nav {
         display: flex;
     }
