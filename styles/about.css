@@ -1,16 +1,16 @@
 @font-face {
     font-family: 'RobotoLI';
-    src: url(./assets/fonts/Roboto-LightItalic.ttf);
+    src: url(../assets/fonts/Roboto-LightItalic.ttf);
 }
 
 @font-face {
     font-family: 'RobotoCite';
-    src: url(./assets/fonts/Roboto-Bold.ttf);
+    src: url(../assets/fonts/Roboto-Bold.ttf);
 }
 
 @font-face {
     font-family: 'RobotoRegular';
-    src: url(./assets/fonts/Roboto-Regular.ttf);
+    src: url(../assets/fonts/Roboto-Regular.ttf);
 }
 
 * {
@@ -177,6 +177,7 @@ html {
 .trip-container {
     width: 90%;
     margin: 0 auto;
+    border-bottom: 1px solid #1F2937;
 }
 
 .trip-contact-container {
@@ -185,6 +186,11 @@ html {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 1.5rem;
+}
+
+.trip-contact-container:nth-child(2),
+.trip-contact-container:nth-child(4) {
+  flex-direction: row-reverse; 
 }
 
 .trip-content-image-placeholder {
@@ -302,6 +308,11 @@ html {
         flex-direction: column;
         gap: 1rem;
     }
+
+    .trip-contact-container:nth-child(2),
+    .trip-contact-container:nth-child(4) {
+  flex-direction: row; 
+}
 
    
     .menu-toggle:checked + .hamburger-icon + .nav {
