@@ -1,33 +1,56 @@
 @font-face {
-    font-family: 'RobotoRegular';
-    src: url(./assets/fonts/Roboto-Regular.ttf);
+    font-family: 'RobotoLI';
+    src: url(../assets/fonts/Roboto-LightItalic.ttf);
 }
-*{
+
+@font-face {
+    font-family: 'RobotoCite';
+    src: url(../assets/fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'RobotoRegular';
+    src: url(../assets/fonts/Roboto-Regular.ttf);
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    font-size: 100%; /* 1rem = 16px */
+    font-family: 'RobotoRegular', sans-serif;
+}
+
 body{
-    font-family:'RobotoRegular', sans-serif;
     background-color: #1F2937;
 }
 
-.header-container {
+.header {
+    background-color: #1F2937;
+    padding: 1.25rem 0; 
+}
+
+.nav-container {
     width: 80%;
+    margin: 0 auto;
+}
+
+.header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: auto;
 }
 
-.logo{
+.header-container a {
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 1.5rem;
     color: #F9FAF8;
-    text-decoration: none;
-}
-
-.logo a {
-    text-decoration: none;
 }
 
 .nav {
@@ -38,8 +61,7 @@ body{
 .nav a {
     color: #E5E7EB;
     text-decoration: none;
-    font-size: 1,125rem;
-    font-family: 'RobotoRegular', sans-serif;
+    font-size: 1.125rem;
 }
 
 .nav a:hover {
@@ -66,87 +88,54 @@ body{
     transition: transform 0.3s, opacity 0.3s;
 }
 
-
-.contact{
-    position: relative;
-    min-height: 100vh;
-    padding: 50px 100px;
+.contact {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    background-size: cover;
+    flex-wrap: wrap;
+    gap: 3rem;
+    width: 80%;
+    height: calc(94vh - 10vh);
+    margin: 0 auto;
 }
 
-.content h2{
-    margin-bottom: 1.5rem;
-}
-
-.contact  .content{
-    max-width: 800px;
-    text-align: center;
+.contact .block {
+    flex: 1;
 }
 
 .contact  .content h2{
     font-size: 48px;
     font-weight:bold ;
     color: #E5E7EB;
+    margin-bottom: 1rem;
 }
 
-.contact  .content P{
-    font-weight: 300;
+.content p{
     color: #E5E7EB;
 }
 
-.container{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
+.container {
+    background-color: #F9FAF8;
+    padding: 1rem;
 }
 
-.container  .contact-info{
-    width: 50%;
+.contact-info {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 2rem;
+    color: #F9FAF8;
 }
 
-.container .contact-info .box{
-    position: relative;
-    padding: 20px 0;
-    display: flex;
-}
-
-.container .contact-info .box .icons{
-    min-width: 60px;
-    height: 60px;
+.icons{
+    width: 3.5rem;
+    height: 3.5rem;
     background: #E5E7EB;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    font-size: 22px;
-}
-
-.container .contact-info .box .texts{
-    display: flex;
-    margin-left: 20px;
-    font-size: 16px;
-    color: #F9FAF8;
-    flex-direction: column;
-    font-weight: 300;
-}
-
-.container .contact-info .box .texts h3{
-    font-weight: 500;
-    color: #E5E7EB;
-}
-
-.contact-form{
-    width: 40%;
-    padding: 40px;
-    background: #fff;
+    margin-bottom: 1rem;
 }
 
 .contact-form h2{
@@ -158,7 +147,7 @@ body{
 .contact-form .inputbox{
     position: relative;
     width: 100%;
-    margin-top: 10px;
+    margin-top: 8px;
 }
 
 .contact-form .inputbox input, textarea{
@@ -170,6 +159,10 @@ body{
     border-bottom: 2px solid #333;
     outline: none;
     resize: none;
+}
+
+.texts {
+    font-style: normal;
 }
 
 .contact-form .inputbox span{
@@ -204,21 +197,39 @@ body{
     border-radius: 5px;
 }
 
-@media (max-width:990px) {
-    .contact{
-        padding: 50px;
-    }
-    .container{
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1F2937;
+    margin: 0;
+    color: #E5E7EB;
+    font-family: 'RobotoRegular', sans-serif;
+    min-height: 10vh;
+}
+
+@media (max-width: 770px) {
+    .contact {
+        height: auto; 
         flex-direction: column;
     }
-    .container .contact-info{
-        margin-bottom: 40px;
-    }
-    .container .contact-info, .contact-form{
-        width: 100%;
+
+    .container {
+        align-self: stretch;
     }
 }
-@media (max-width: 480px) {
+
+@media (max-width:480px) {
+    
+    .contact-info {
+        flex-direction: column;
+    }
+
+    .box {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
     
     .hamburger-icon {
         display: flex;
@@ -236,7 +247,6 @@ body{
         gap: 1rem;
         z-index: 10;
     }
-
     .menu-toggle:checked + .hamburger-icon + .nav {
         display: flex;
     }
@@ -253,5 +263,6 @@ body{
         transform: rotate(-45deg) translate(5px, -5px);
     }
 }
+
 
 
