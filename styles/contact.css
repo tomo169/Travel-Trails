@@ -153,6 +153,7 @@ html {
     color: #F9FAF8;
     flex-direction: column;
     font-weight: 300;
+    font-style: normal;
 }
 
 .container .contact-info .box .texts h3{
