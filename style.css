@@ -143,13 +143,18 @@ html {
     transform: scale(1.1);
 }
 
+.info {
+    margin: 2% 0;
+}
 
-h2 {
+
+.info h2 {
     font-size: 2.25rem;
     font-weight: bold;
     font-family: 'RobotoCite';
     color: #1F2937;
     text-align: center;
+    margin-bottom: 2%;
 }
 
 .info-container {
