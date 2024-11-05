@@ -24,6 +24,10 @@ html {
     font-family: 'RobotoRegular', sans-serif;
 }
 
+body{
+    background-color: #1F2937;
+}
+
 .header {
     background-color: #1F2937;
     padding: 1.25rem 0; 
@@ -84,87 +88,54 @@ html {
     transition: transform 0.3s, opacity 0.3s;
 }
 
-.contact{
-    position: relative;
-    min-height: 100vh;
-    padding: 50px 100px;
+.contact {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    background-color: #1F2937;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    width: 80%;
+    height: calc(94vh - 10vh);
+    margin: 0 auto;
 }
 
-.contact  .content{
-    display: flex;
-    flex-direction: column;
-    max-width: 600px;
-    margin-left: 5%;
-    justify-content: center;
+.contact .block {
+    flex: 1;
 }
 
 .contact  .content h2{
     font-size: 48px;
     font-weight:bold ;
     color: #E5E7EB;
-    margin-bottom: 0px;
+    margin-bottom: 1rem;
 }
 
-.contact  .content P{
-    font-weight: 300;
+.content p{
     color: #E5E7EB;
 }
 
-.container{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
+.container {
+    background-color: #F9FAF8;
+    padding: 1rem;
 }
 
-.container  .contact-info{
-    width: 50%;
+.contact-info {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 2rem;
+    color: #F9FAF8;
 }
 
-.container .contact-info .box{
-    position: relative;
-    padding: 20px 0;
-    display: flex;
-}
-
-.container .contact-info .box .icons{
-    min-width: 60px;
-    height: 60px;
+.icons{
+    width: 3.5rem;
+    height: 3.5rem;
     background: #E5E7EB;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    font-size: 22px;
-}
-
-.container .contact-info .box .texts{
-    display: flex;
-    margin-left: 20px;
-    font-size: 16px;
-    color: #F9FAF8;
-    flex-direction: column;
-    font-weight: 300;
-    font-style: normal;
-}
-
-.container .contact-info .box .texts h3{
-    font-weight: 500;
-    color: #E5E7EB;
-}
-
-.contact-form{
-    width: 40%;
-    padding: 15px;
-    background: #fff;
+    margin-bottom: 1rem;
 }
 
 .contact-form h2{
@@ -188,6 +159,10 @@ html {
     border-bottom: 2px solid #333;
     outline: none;
     resize: none;
+}
+
+.texts {
+    font-style: normal;
 }
 
 .contact-form .inputbox span{
@@ -233,19 +208,29 @@ html {
     min-height: 10vh;
 }
 
-@media (max-width:480px) {
-    .contact{
-        padding:43px;
-    }
-    .container{
+@media (max-width: 770px) {
+    .contact {
+        height: auto; 
         flex-direction: column;
     }
-    .container .contact-info{
-        margin-bottom: 40px;
+
+    .container {
+        align-self: stretch;
     }
-    .container .contact-info, .contact-form{
-        width: 100%;
+}
+
+@media (max-width:480px) {
+    
+    .contact-info {
+        flex-direction: column;
     }
+
+    .box {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+    
     .hamburger-icon {
         display: flex;
     }
@@ -276,12 +261,6 @@ html {
 
     .menu-toggle:checked + .hamburger-icon span:nth-child(3) {
         transform: rotate(-45deg) translate(5px, -5px);
-    }
-}
-/*targeting larger screen*/
-@media (min-width:768px) {
-    .contact{
-        padding: 50px 100px;
     }
 }
 
