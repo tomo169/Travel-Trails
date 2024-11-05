@@ -177,7 +177,7 @@ html {
 .trip-container {
     width: 90%;
     margin: 0 auto;
-    border-bottom: 1px solid #1F2937;
+    border-bottom: 1px solid rgb(31, 41, 55, 0.3);
 }
 
 .trip-contact-container {

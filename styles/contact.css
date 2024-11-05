@@ -84,31 +84,30 @@ html {
     transition: transform 0.3s, opacity 0.3s;
 }
 
-
 .contact{
     position: relative;
     min-height: 100vh;
     padding: 50px 100px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
     background-color: #1F2937;
 }
 
-.content h2{
-    margin-bottom: 1.5rem;
-}
-
 .contact  .content{
-    max-width: 800px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin-left: 5%;
+    justify-content: center;
 }
 
 .contact  .content h2{
     font-size: 48px;
     font-weight:bold ;
     color: #E5E7EB;
+    margin-bottom: 0px;
 }
 
 .contact  .content P{
@@ -164,7 +163,7 @@ html {
 
 .contact-form{
     width: 40%;
-    padding: 40px;
+    padding: 15px;
     background: #fff;
 }
 
@@ -177,7 +176,7 @@ html {
 .contact-form .inputbox{
     position: relative;
     width: 100%;
-    margin-top: 10px;
+    margin-top: 8px;
 }
 
 .contact-form .inputbox input, textarea{
@@ -223,9 +222,20 @@ html {
     border-radius: 5px;
 }
 
-@media (max-width:990px) {
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1F2937;
+    margin: 0;
+    color: #E5E7EB;
+    font-family: 'RobotoRegular', sans-serif;
+    min-height: 10vh;
+}
+
+@media (max-width:480px) {
     .contact{
-        padding: 50px;
+        padding:43px;
     }
     .container{
         flex-direction: column;
@@ -236,9 +246,6 @@ html {
     .container .contact-info, .contact-form{
         width: 100%;
     }
-}
-@media (max-width: 480px) {
-    
     .hamburger-icon {
         display: flex;
     }
@@ -255,7 +262,6 @@ html {
         gap: 1rem;
         z-index: 10;
     }
-
     .menu-toggle:checked + .hamburger-icon + .nav {
         display: flex;
     }
@@ -272,5 +278,12 @@ html {
         transform: rotate(-45deg) translate(5px, -5px);
     }
 }
+/*targeting larger screen*/
+@media (min-width:768px) {
+    .contact{
+        padding: 50px 100px;
+    }
+}
+
 
 
